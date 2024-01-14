@@ -7,7 +7,7 @@
 
 Официальная инструкция по установке: https://learn.microsoft.com/en-us/windows/wsl/install. Смотрите внимательно и пройдите все шаги, [Следует удостовериться](https://learn.microsoft.com/en-us/windows/wsl/install#check-which-version-of-wsl-you-are-running), что вы поставили именно WSL 2. WSL 2 в отличие от WSL 1 на самом деле использует ядро Linux, поддерживает полную совместимость системных вызовов и производительнее.
 
-Также есть туториал, который как по моему мнению лучше простой инструкции по установке. Там в отличие от инструкции по установке, там немного рассказывают про дистрибутивы. Ставьте [LTS версию 22.04.3 Ubuntu](https://apps.microsoft.com/detail/9PN20MSR04DW?hl=ru-ru&gl=RU).
+Также есть туториал, который как по моему мнению лучше простой инструкции по установке. Там в отличие от инструкции по установке немного рассказывают про дистрибутивы. Ставьте [LTS версию 22.04.3 Ubuntu](https://apps.microsoft.com/detail/9PN20MSR04DW?hl=ru-ru&gl=RU).
 
 Далее на основной системе поставьте [VSCode](vscode.md) и следуете по инструкции о подключении к [WSL в VSCode](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode).
 
