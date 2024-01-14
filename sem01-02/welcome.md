@@ -32,3 +32,7 @@ header h1 {
 ---
 # GitLab repo
 ![w:600 center](images/gitlab_repo.png)
+---
+---
+# Страница запущенных пайплайнов (submits)
+![w:600 center](images/pipelines.png)
