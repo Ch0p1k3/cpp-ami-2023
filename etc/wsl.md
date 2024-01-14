@@ -1,5 +1,7 @@
 # WSL
 
+!!! Можно не читать мои рассказы и посмотреть инструкцию по установке WSL, которая указана в [задачке multiplication](https://gitlab.com/BigRedEye1/hse-base-cxx-2024/-/tree/main/tasks/multiplication?ref_type=heads#windows-wsl)
+
 Начиная с Windows 10 появилась такая фича как WSL: Windows Subsystem for Linux,
 с её помощью можно запускать Linux-приложения на Windows.
 
