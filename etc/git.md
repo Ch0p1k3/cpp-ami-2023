@@ -31,6 +31,5 @@ git config --global user.email "ch00p.228@gmail.com"
 - `git push` - залить изменения на удаленный репозиторий;
 
 ### Полезные ссылки
-- [Git Pro](https://git-scm.com/book/en/v2) - книга по git, есть на русском
+- [Pro Git](https://git-scm.com/book/en/v2) - книга по git, есть на русском
 - [Классный тренажер](https://gitexercises.fracz.com/)
-
