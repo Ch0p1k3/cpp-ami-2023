@@ -30,5 +30,5 @@ header h1 {
 ![w:600 center](images/base_cpp_interface.png)
 ---
 ---
-# Gitlab repo
+# GitLab repo
 ![w:600 center](images/gitlab_repo.png)
