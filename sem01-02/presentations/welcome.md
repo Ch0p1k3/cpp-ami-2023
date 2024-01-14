@@ -55,3 +55,39 @@ https://github.com/Ch0p1k3/cpp-ami-2023/tree/main
 Формула оценки: 0.25 * домашние задания + 0.25 * проект + 0.2 * КР + 0.1 * Экзамен + 0.1 * Семинарская оценка
 
 Решил, что буду делать квизы (на 3-5 минут(ы)) в начале (конце) наших семинаров.
+---
+---
+# IDE
+
+Я буду пользоваться VSCode и вам рекомендую. На лекции еще говорилось про СLion, Neovim. Собрал
+
+| | VSCode | CLion | Neovim |
+--- | --- | --- | --- |
+Цена | Бесплатный | Платный, но можно получить лиц. для студентов | Бесплатный |
+Гибкость | Взаимодействие с множеством языков и не только (LaTeX, Marp) | С++ | Взаимодействие с множеством языков и не только |
+Порог вхождения | Средний | Легкий | Тяжелый |
+---
+# VSCode
+
+## Установка
+
+Переходим по [ссылке](https://code.visualstudio.com/), скачиваем и устанавливаем.
+
+## Плагины
+- [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) - go-to-definition, intellisense, подсвечивание ошибок и т. д.
+- [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) - для поддержки СMake в VSCode. Позволяет собирать и запускать таргеты СMake по кнопкам в VSCode.
+- [CMake](https://marketplace.visualstudio.com/items?itemName=twxs.cmake) - подсветка синтаксиса и автодополнение СMake. Пока опционально, но скорее всего вы будете писать свои CMake файлы.
+- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) - для пользователей Windows, которым нужно подключиться к WSL.
+- [Sort lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines) - вообще необязательно, но я с помощью этого расширения сортирую инклюды.
+---
+# Установка последней стабильной версии clang
+## MacOS
+```zsh
+brew install llvm
+```
+## Linux с Advanced Packaging Tool (APT)
+https://apt.llvm.org/
+```bash
+bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+
+```
