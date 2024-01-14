@@ -7,7 +7,7 @@
 ```bash
 ssh-keygen -t rsa -b 2048
 ```
-Создает ключ типа `rsa` размером 2048 байт.
+Создает ключ типа [RSA](https://ru.wikipedia.org/wiki/RSA) размером 2048 байт.
 
 ### Первые шаги
 ```bash
