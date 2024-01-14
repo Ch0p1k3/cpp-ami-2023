@@ -32,7 +32,7 @@
 ## Открыть VSCode из терминала
 
 ```bash
-code /home/chopik/python
+code /home/chopik/folder
 ```
 
 Это работает как и в [WSL](wsl.md), так и в корневой системе.
