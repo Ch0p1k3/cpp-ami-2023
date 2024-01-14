@@ -9,6 +9,6 @@
 
 Также есть туториал, который как по моему мнению лучше простой инструкции по установке. Там в отличие от инструкции по установке, там немного рассказывают про дистрибутивы. Ставьте [LTS версию 22.04.3 Ubuntu](https://apps.microsoft.com/detail/9PN20MSR04DW?hl=ru-ru&gl=RU).
 
-Далее на основной системе поставьте [VSCode](vscode.md) и следуете по инструкции, как подключаться к [WSL в VSCode](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode).
+Далее на основной системе поставьте [VSCode](vscode.md) и следуете по инструкции о подключении к [WSL в VSCode](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode).
 
 P.S. Но все-таки я бы советовал однажды полноценно пересесть на Linux (я лично пользуюсь Ubuntu, но на лекциях вам советовали ставить Kubuntu). Совсем необязательно сносить Windows, всегда можно поставить Linux второй системой - простой загуглите "ubuntu dual b oot windows" и пойдите по одному из гайдов.
