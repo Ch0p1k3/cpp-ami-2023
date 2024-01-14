@@ -1,4 +1,6 @@
-### Как установить
+!!! Рекомендую глянуть [ноутбук, в котором мы разбираемся с git](/sem01-02/presentations/git.ipynb)
+
+### Где скачать
 - [Windows](https://git-scm.com/download/win/)
 - [Linux](https://git-scm.com/download/linux)
 - [MacOS](https://git-scm.com/download/mac)

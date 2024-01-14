@@ -17,7 +17,13 @@ header h1 {
 # Ассистент: Турулин Захар
 ---
 # Чат в телеграме
-![w:400 center](images/qr.png)
+![w:500 center](images/qr.png)
+https://t.me/+Gy77joNj6AQ0MmQ6
+---
+---
+# Репозиторий с материалами семинаров
+![w:500 center](images/qrcode_repo.png)
+https://github.com/Ch0p1k3/cpp-ami-2023/tree/main
 ---
 ---
 # Система для сдачи задач
@@ -36,3 +42,9 @@ header h1 {
 ---
 # Страница запущенных пайплайнов (submits)
 ![w:600 center](images/pipelines.png)
+---
+---
+# Операционная система (ОС)
+Тем у кого Linux, MacOS ничего делать дополнительно не нужно. А тем у кого Windows, то советую поставить WSL.
+
+Ссылка на мой рассказ для пользователей Windows: https://github.com/Ch0p1k3/cpp-ami-2023/blob/main/etc/wsl.md
