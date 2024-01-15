@@ -88,6 +88,6 @@ brew install llvm
 ## Linux с Advanced Packaging Tool (APT)
 https://apt.llvm.org/
 ```bash
-bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
-
+sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+ln -s /usr/bin/clang++-17 /usr/bin/clang++
 ```
