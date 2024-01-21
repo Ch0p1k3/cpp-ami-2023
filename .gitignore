@@ -122,3 +122,4 @@ dmypy.json
 !*.*
 # Unignore all dirs
 !*/
+!Makefile
