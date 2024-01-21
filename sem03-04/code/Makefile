@@ -2,7 +2,7 @@ CC=clang++
 CXXFLAGS=-O3 --std=c++20
 EXTRA_CXXFLAGS=
 
-all: sizeof cinttypes char overflow cast sandbox
+all: sizeof cinttypes char overflow cast endian sandbox
 
 sizeof:
 	$(CC) $(CXXFLAGS) $(EXTRA_CXXFLAGS) sizeof.cpp -o sizeof && ./sizeof && rm -rf sizeof
