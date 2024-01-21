@@ -44,6 +44,7 @@
 [GNU Debugger (GDB)](https://en.wikipedia.org/wiki/GNU_Debugger) - дебагер, который используется для множества языков. Лично нам он нужен для дебага `C++` кода. Вообще говоря, советую использовать дебагер напрямую, через `shell`, а не настраивать взаимодействие с ним через `VSCode`. Советую глянуть [лекцию Кутенина про GDB и LLDB](https://www.youtube.com/watch?v=Q5pe47sjE1g).
 
 1. Устанавливаем плагин [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Раньше писало в нотификациях, что плагины `clangd` и `C/C++` конфликтуют, но, когда я установил, то не увидел такого. Если у вас отпишет, то давайте это обсудим в чате в телеграме.
+
 2. Вставляем такой `JSON` в `.vscode/launch.json` (создаем директорию и файл, если такого пути еще нет):
 ```json
 {
@@ -80,12 +81,16 @@
 }
 ```
 <img src="images/launch.json.png"/>
+
 3. Нажимаем `Run and Debug` (все должно выглядить как на скрине):
 <img src="images/run_and_debug.png" width="500"/>
-4. Выбрать нужный `target` в `CMake`:
+
+4. Выбираем нужный `target` в `CMake`:
 <img src="images/cmake_target.png" width="500"/>
+
 5. Ставим breakpoint (красную точку, надо нажать слева от цифры):
 <img src="images/breakpoint.png"/>
+
 6. Нажимаем `Start debugging` (или `F5` на клавиатуре):
 <img src="images/start_debugging.png"/>
 
