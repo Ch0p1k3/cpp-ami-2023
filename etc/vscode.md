@@ -43,6 +43,57 @@
 
 [GNU Debugger (GDB)](https://en.wikipedia.org/wiki/GNU_Debugger) - дебагер, который используется для множества языков. Лично нам он нужен для дебага `C++` кода. Вообще говоря, советую использовать дебагер напрямую, через `shell`, а не настраивать взаимодействие с ним через `VSCode`. Советую глянуть [лекцию Кутенина про GDB и LLDB](https://www.youtube.com/watch?v=Q5pe47sjE1g).
 
+1. Устанавливаем плагин [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Раньше писало в нотификациях, что плагины `clangd` и `C/C++` конфликтуют, но, когда я установил, то не увидел такого. Если у вас отпишет, то давайте это обсудим в чате в телеграме.
+2. Вставляем такой `JSON` в `.vscode/launch.json` (создаем директорию и файл, если такого пути еще нет):
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            // Resolved by CMake Tools:
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    // add the directory where our target was built to the PATHs
+                    // it gets resolved by CMake Tools:
+                    "name": "PATH",
+                    "value": "${env:PATH}:${command:cmake.getLaunchTargetDirectory}"
+                },
+            ],
+            "console": "externalTerminal",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
+```
+<img src="images/launch.json.png"/>
+3. Нажимаем `Run and Debug`:
+<img src="images/run_and_debug.png" width="500"/>
+4. Ставим breakpoint (красную точку, надо нажать слева от цифры):
+<img src="images/breakpoint.png"/>
+5. Нажимаем `Start debugging` (или `F5` на клавиатуре):
+<img src="images/start_debugging.png"/>
+
+Все будет запущено. Можно дебажить через интерфейс `VSCode`. Через `DEBUG CONSOLE` можно писать команды `GDB` добавляя `--exec`, например:
+```
+--exec n
+```
+<img src="images/debug_console.png"/>
+
+
 ## Дебаг через LLDB  в VSCode
 
 **Если у вас не MacOS с процессором `ARM` архитектуры (`M1`/`M2`), то лучше использовать GDB**
