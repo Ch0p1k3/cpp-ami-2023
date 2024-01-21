@@ -53,3 +53,19 @@ brew install cmake
 ```bash
 sudo apt install cmake
 ```
+
+## Установка GDB
+### MacOS с процессором x86
+```zsh
+brew install gdb
+```
+### Linux с Advanced Packaging Tool (APT)
+```bash
+sudo apt update && sudo apt install gdb
+```
+
+## Установка LLDB
+### MacOS
+```zsh
+brew install lldb
+```
