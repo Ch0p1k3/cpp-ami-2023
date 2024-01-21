@@ -43,8 +43,7 @@
 
 [GNU Debugger (GDB)](https://en.wikipedia.org/wiki/GNU_Debugger) - дебагер, который используется для множества языков. Лично нам он нужен для дебага `C++` кода. Вообще говоря, советую использовать дебагер напрямую, через `shell`, а не настраивать взаимодействие с ним через `VSCode`. Советую глянуть [лекцию Кутенина про GDB и LLDB](https://www.youtube.com/watch?v=Q5pe47sjE1g).
 
-1. Устанавливаем плагин [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Раньше писало в нотификациях, что плагины `clangd` и `C/C++` конфликтуют, но, когда я установил, то не увидел такого. Если у вас отпишет, то давайте это обсудим в чате в телеграме.
-
+1. Устанавливаем плагин [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Если будет нотификация о том, что `C/C++` и `clangd` плагины конфликтуют, то надо выключить `IntelliSense` в плагине `C/C++`.
 2. Вставляем такой `JSON` в `.vscode/launch.json` (создаем директорию и файл, если такого пути еще нет):
 <img src="images/launch.json.png"/>
 
