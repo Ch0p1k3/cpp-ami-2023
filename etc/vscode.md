@@ -80,11 +80,13 @@
 }
 ```
 <img src="images/launch.json.png"/>
-3. Нажимаем `Run and Debug`:
+3. Нажимаем `Run and Debug` (все должно выглядить как на скрине):
 <img src="images/run_and_debug.png" width="500"/>
-4. Ставим breakpoint (красную точку, надо нажать слева от цифры):
+4. Выбрать нужный `target` в `CMake`:
+<img src="images/cmake_target.png" width="500"/>
+5. Ставим breakpoint (красную точку, надо нажать слева от цифры):
 <img src="images/breakpoint.png"/>
-5. Нажимаем `Start debugging` (или `F5` на клавиатуре):
+6. Нажимаем `Start debugging` (или `F5` на клавиатуре):
 <img src="images/start_debugging.png"/>
 
 Все будет запущено. Можно дебажить через интерфейс `VSCode`. Через `DEBUG CONSOLE` можно писать команды `GDB` добавляя `--exec`, например:
