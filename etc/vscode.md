@@ -36,6 +36,7 @@
 - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) - для пользователей Windows, которым нужно подключиться к WSL.
 - [Sort lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines) - вообще необязательно, но я с помощью этого расширения сортирую инклюды.
 - [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) - вообще говоря это аналог `clangd`. Но этот плагин нам понадобиться только для дебага с помощью `GDB` внутри `vscode`. **Тем у кого MacOS с процессором `ARM` архитектуры (`M1`/`M2`) не нужно качать этот плагин, так как они не смогут установить себе `GDB`, так как он не поддержан на данной архитектуре процессоров.**
+- [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) - этот плагин нужен пользователям MacOS c ARM для того, чтобы взаимодействовать с `LLDB` через MacOS.
 
 ## Дебаг через GDB в VSCode
 
@@ -107,7 +108,43 @@
 
 [LLDB](https://lldb.llvm.org/) - дебагер от проекта [LLVM](https://llvm.org/). `LLDB` отличается от `GDB`, если использоваться его через `shell`, но кажется взаимодействие с ним через интерфейс `VSCode` не должно сильно отличаться от аналогичного взаимодействия с `GDB`.
 
-TBD
+1. Устанавливаем плагин [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb).
+2. Аналогично инструкции [GDB](#дебаг-через-gdb-в-vscode), только другой `launch.json`:
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) Launch",
+            "type": "lldb",
+            "request": "launch",
+            // Resolved by CMake Tools:
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    // add the directory where our target was built to the PATHs
+                    // it gets resolved by CMake Tools:
+                    "name": "PATH",
+                    "value": "${env:PATH}:${command:cmake.getLaunchTargetDirectory}"
+                },
+            ],
+            "console": "externalTerminal",
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
+```
+3-6 шаги аналогично с [GDB](#дебаг-через-gdb-в-vscode).
 
 ## Открыть VSCode из терминала
 
