@@ -42,10 +42,12 @@ sizeof expression
 # Целые типы, которые лучше использовать
 - `cstdint` - `intN_t`, `uintN_t`.
 - `cinttypes` - [I/O макросы](https://en.cppreference.com/w/cpp/header/cinttypes).
+
 [cinttypes.cpp](code/cinttypes.cpp)
 ---
+---
 # Разряды
-![](images/digit.png)
+![w:900 center](images/digit.png)
 ---
 ---
 # Знаковые целые числа
@@ -150,6 +152,9 @@ table {
 никаких оптимизационных предположений
 - `-fsanitize=undefined` – проверка на undefined
 behavior при работе программы
+
+[overflow.cpp](code/overflow.cpp)
+---
 ---
 # Еще undefined behavior при знаковых операциях
 - Сдвиг на число бит, большее размера типа –
@@ -183,5 +188,8 @@ behavior
 - Преобразование знакового типа в беззнаковый тип
 сохраняет битовое представление
 - Преобразование более широкого типа в более узкий тип отсекает старшие биты
+
+[cast.cpp](code/cast.cpp)
+---
 ---
 # Представление вещественных чисел
