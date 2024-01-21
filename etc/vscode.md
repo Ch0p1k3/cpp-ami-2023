@@ -29,6 +29,28 @@
 - `Alt + Z` - включить режим `word wrap`.
 - `Shift + Alt + F` - форматнуть документ.
 
+## Cписок плагинов
+- [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) - go-to-definition, intellisense, подсвечивание ошибок и т. д.
+- [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) - для поддержки СMake в VSCode. Позволяет собирать и запускать таргеты СMake по кнопкам в VSCode.
+- [CMake](https://marketplace.visualstudio.com/items?itemName=twxs.cmake) - подсветка синтаксиса и автодополнение СMake. Пока опционально, но скорее всего вы будете писать свои CMake файлы.
+- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) - для пользователей Windows, которым нужно подключиться к WSL.
+- [Sort lines](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines) - вообще необязательно, но я с помощью этого расширения сортирую инклюды.
+- [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) - вообще говоря это аналог `clangd`. Но этот плагин нам понадобиться только для дебага с помощью `GDB` внутри `vscode`. **Тем у кого MacOS с процессором `ARM` архитектуры (`M1`/`M2`) не нужно качать этот плагин, так как они не смогут установить себе `GDB`, так как он не поддержан на данной архитектуре процессоров.**
+
+## Дебаг через GDB в VSCode
+
+**Тем у кого MacOS с процессором `ARM` архитектуры (`M1`/`M2`) нужно дебажиться через другой дебагер - LLDB**
+
+[GNU Debugger (GDB)](https://en.wikipedia.org/wiki/GNU_Debugger) - дебагер, который используется для множества языков. Лично нам он нужен для дебага `C++` кода. Вообще говоря, советую использовать дебагер напрямую, через `shell`, а не настраивать взаимодействие с ним через `VSCode`. Советую глянуть [лекцию Кутенина про GDB и LLDB](https://www.youtube.com/watch?v=Q5pe47sjE1g).
+
+## Дебаг через LLDB  в VSCode
+
+**Если у вас не MacOS с процессором `ARM` архитектуры (`M1`/`M2`), то лучше использовать GDB**
+
+[LLDB](https://lldb.llvm.org/) - дебагер от проекта [LLVM](https://llvm.org/). `LLDB` отличается от `GDB`, если использоваться его через `shell`, но кажется взаимодействие с ним через интерфейс `VSCode` не должно сильно отличаться от аналогичного взаимодействия с `GDB`.
+
+TBD
+
 ## Открыть VSCode из терминала
 
 ```bash
