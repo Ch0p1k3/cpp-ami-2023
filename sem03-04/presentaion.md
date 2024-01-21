@@ -146,10 +146,23 @@ table {
 # Дополнительный код
 - Переполнение знакового числа это undefined behavior
 - `-fwrapv` – выполнять знаковые операции по
-модулю 2^N, но компилятор не делает
+модулю $2^n$, но компилятор не делает
 никаких оптимизационных предположений
 - `-fsanitize=undefined` – проверка на undefined
 behavior при работе программы
+---
+# Еще undefined behavior при знаковых операциях
+- Сдвиг на число бит, большее размера типа –
+undefined behavior
+- Сдвиг отрицательного числа влево – undefined
+behavior
+- Сдвиг на отрицательную величину – undefined
+behavior
+---
+# Порядок байт
+![w:900 center](images/endian.jpg)
+[endian.cpp](code/endian.cpp)
+---
 ---
 # Char
 - `char` - может быть либо знаковым, либо беззнаковым (implementation defined behavior)
@@ -166,5 +179,9 @@ behavior при работе программы
 - `#include <climits>`
 - `CHAR_BIT, MB_LEN_MAX, CHAR_MIN, CHAR_MAX, SCHAR_MIN, SHRT_MIN, INT_MIN, LONG_MIN, LLONG_MIN, SCHAR_MAX, SHRT_MAX, INT_MAX, LONG_MAX, LLONG_MAX, UCHAR_MAX, USHRT_MAX, UINT_MAX, ULONG_MAX, ULLONG_MAX, PTRDIFF_MIN, PTRDIFF_MAX, SIZE_MAX, SIG_ATOMIC_MIN, SIG_ATOMIC_MAX, WCHAR_MIN, WCHAR_MAX, WINT_MIN, WINT_MAX`
 ---
+# Каст целых чисел
+- Преобразование знакового типа в беззнаковый тип
+сохраняет битовое представление
+- Преобразование более широкого типа в более узкий тип отсекает старшие биты
 ---
 # Представление вещественных чисел
