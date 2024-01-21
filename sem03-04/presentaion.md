@@ -143,10 +143,28 @@ table {
   $-0_{10} = ~0_{10} + 1 = 1111_{2} + 1_{2} = 0000_{2} = 0$
 - Операции сложения и вычитания n-битных беззнаковых чисел дают правильный результат для знаковый чисел.
 ---
+# Дополнительный код
+- Переполнение знакового числа это undefined behavior
+- `-fwrapv` – выполнять знаковые операции по
+модулю 2^N, но компилятор не делает
+никаких оптимизационных предположений
+- `-fsanitize=undefined` – проверка на undefined
+behavior при работе программы
+---
 # Char
 - `char` - может быть либо знаковым, либо беззнаковым (implementation defined behavior)
 - Можно переключаться между режимами, через `-fsigned-char`, `-funsigned-char`. (точно работает в `clang++`, `g++`)
 
 [char.cpp](code/char.cpp)
+---
+---
+# Максимальные и минимальные значения типов
+- [C++ style](https://en.cppreference.com/w/cpp/types/numeric_limits)
+- `#include <limits>`
+- `std::numeric_limits<type>`
+- [C style](https://en.cppreference.com/w/cpp/types/climits)
+- `#include <climits>`
+- `CHAR_BIT, MB_LEN_MAX, CHAR_MIN, CHAR_MAX, SCHAR_MIN, SHRT_MIN, INT_MIN, LONG_MIN, LLONG_MIN, SCHAR_MAX, SHRT_MAX, INT_MAX, LONG_MAX, LLONG_MAX, UCHAR_MAX, USHRT_MAX, UINT_MAX, ULONG_MAX, ULLONG_MAX, PTRDIFF_MIN, PTRDIFF_MAX, SIZE_MAX, SIG_ATOMIC_MIN, SIG_ATOMIC_MAX, WCHAR_MIN, WCHAR_MAX, WINT_MIN, WINT_MAX`
+---
 ---
 # Представление вещественных чисел
