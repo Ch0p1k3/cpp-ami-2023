@@ -14,6 +14,7 @@ header h1 {
 </style>
 
 # Представление целых чисел
+- https://github.com/blackav/hse-caos-2019/blob/master/00-lectures/02-integers/lecture02.pdf
 ---
 # Байты и октеты
 - Обычно, мы мы говорим байт, и имеем в виду под этим 8 бит, но это не так
