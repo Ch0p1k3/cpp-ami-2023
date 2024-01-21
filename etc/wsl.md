@@ -15,7 +15,7 @@
 3. Запустить Ubuntu-20.04 ([все способы](https://learn.microsoft.com/ru-ru/windows/wsl/install#ways-to-run-multiple-linux-distributions-with-wsl)).
 4. Если вы используете VSCode, то он автоматически предложит использовать WSL (также имеется [инструкция](https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-product.html#wsl-tooclhain) для CLion).
 
-Далее на основной системе поставьте [VSCode](vscode.md) и следуйте по инструкции о подключении к [WSL в VSCode](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode).
+Далее на основной системе поставьте [VSCode](vscode.md) и следуйте по инструкции о подключении к [WSL в VSCode](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode). Либо поставьте `CLion` и следуйте по инструкции о подключении к [WSL в CLion](https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-product.html?ysclid=lrn8w78p5s627377564).
 
 P.S. Но все-таки я бы советовал однажды полноценно пересесть на Linux (я лично пользуюсь Ubuntu, но на лекциях вам советовали ставить Kubuntu). Совсем необязательно сносить Windows, всегда можно поставить Linux второй системой - простой загуглите "ubuntu dual b oot windows" и пойдите по одному из гайдов.
 Также я совсем не знаю про интеграцию WSL с CLion, так что рекомендовал бы пользоваться VSCode или как-нибудь "терминальным" текстовым редактором (vim, neovim).
