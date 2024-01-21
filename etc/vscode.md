@@ -46,6 +46,8 @@
 1. Устанавливаем плагин [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). Раньше писало в нотификациях, что плагины `clangd` и `C/C++` конфликтуют, но, когда я установил, то не увидел такого. Если у вас отпишет, то давайте это обсудим в чате в телеграме.
 
 2. Вставляем такой `JSON` в `.vscode/launch.json` (создаем директорию и файл, если такого пути еще нет):
+<img src="images/launch.json.png"/>
+
 ```json
 {
     "version": "0.2.0",
@@ -80,7 +82,6 @@
     ]
 }
 ```
-<img src="images/launch.json.png"/>
 
 3. Нажимаем `Run and Debug` (все должно выглядить как на скрине):
 <img src="images/run_and_debug.png" width="500"/>
