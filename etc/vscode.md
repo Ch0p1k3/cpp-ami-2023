@@ -153,3 +153,11 @@ code /home/chopik/folder
 ```
 
 Это работает как и в [WSL](wsl.md), так и в корневой системе.
+
+## Автоматическое удаление лишних пробелов в конце строк
+
+https://bobbyhadz.com/blog/remove-trailing-whitespace-vscode
+
+## Автоматическое добавление последней пустой строки в файле
+
+https://stackoverflow.com/questions/44704968/visual-studio-code-insert-newline-at-the-end-of-files
