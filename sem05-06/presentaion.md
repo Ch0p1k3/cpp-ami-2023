@@ -33,3 +33,38 @@ header h1 {
 ---
 # Sizeof & alignof
 ![w:900 center](images/alignof.png)
+---
+---
+# Struct
+```bash
+struct Structure {
+    char f1;
+    long long f2;
+    char f3;
+};
+```
+- `sizeof(Structure) == 24` на `X86-64`
+```bash
+struct Structure {
+    long long f2;
+    char f1;
+    char f3;
+};
+```
+- `sizeof(Structure) == 16` на `X86-64`
+---
+# Struct
+```bash
+struct Structure {
+    char f1; // offset: 0
+    // padding + 7
+    long long f2; // offset: 8
+    char f3; // offset 9
+    // padding +7
+};
+```
+Максимальное выравнивание - 8 (поле f2), поэтому:
+  - `Structure` требует выравнивания 8
+  - `sizeof(Structure)` должен быть кратен 8
+
+[struct.cpp](code/struct.cpp)
