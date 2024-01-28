@@ -17,6 +17,9 @@ header h1 {
 ![w:500 center](images/precedence.png)
 - https://en.cppreference.com/w/cpp/language/operator_precedence
 ---
+# Указатели, ссылки, время жизни объектов
+- [ptr.cpp](code/ptr.cpp)
+---
 # Текстовая информация
 - Представление строки - это последовательность байт.
 - `char[]`, где в конце ставится `\0` байт, который является нулевым байтом и обозначает конец строки.

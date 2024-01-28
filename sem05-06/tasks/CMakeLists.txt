@@ -22,3 +22,4 @@ endfunction()
 
 add_subdirectory(move_zeros)
 add_subdirectory(split)
+add_subdirectory(list_to_str)
