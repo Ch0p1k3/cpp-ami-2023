@@ -39,7 +39,7 @@ header h1 {
 ---
 ---
 # Struct
-```bash
+```cpp
 struct Structure {
     char f1;
     long long f2;
@@ -47,7 +47,7 @@ struct Structure {
 };
 ```
 - `sizeof(Structure) == 24` на `X86-64`
-```bash
+```cpp
 struct Structure {
     long long f2;
     char f1;
@@ -57,7 +57,7 @@ struct Structure {
 - `sizeof(Structure) == 16` на `X86-64`
 ---
 # Struct
-```bash
+```cpp
 struct Structure {
     char f1; // offset: 0
     // padding + 7
@@ -71,3 +71,44 @@ struct Structure {
   - `sizeof(Structure)` должен быть кратен 8
 
 [struct.cpp](code/struct.cpp)
+---
+---
+# Enum
+```cpp
+enum class Color {
+    RED,
+    GREEN,
+    YELLOW,
+};
+```
+```cpp
+auto color = Color::GREEN;
+auto color2 = Color::RED;
+```
+---
+# Enum
+```cpp
+switch (color) {
+case Color::RED:
+    std::cout << "RED" << std::endl;
+    break;
+case Color::GREEN:
+    std::cout << "GREEN" << std::endl;
+    break;
+case Color::YELLOW:
+    std::cout << "YELLOW" << std::endl;
+    break;
+default:
+    // UNREACHABLE
+    std::abort();
+}
+```
+---
+# Константы
+```cpp
+namespace task_constants {
+    constexpr uint64_t UINT64CONST = 64;
+    constexpr auto STRINGCONSTANT = "da"; // char*
+    constexpr std::string_view STRINGVIEWCONST = "da";
+}
+```
