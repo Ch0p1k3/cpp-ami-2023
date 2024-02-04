@@ -29,4 +29,10 @@ private:
 # Mutable
 Квалификатор для определения поля, как мутабельного. То есть даже в `const` методах данное поле можно будет менять.
 ---
-#
+# Выделение динамической памяти
+```cpp
+auto* ptr_int = new int{123};
+auto* ptr_array = new int[123];
+delete[] ptr_array;
+delete ptr_int;
+```
