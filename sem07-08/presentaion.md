@@ -29,6 +29,35 @@ private:
 # Mutable
 Квалификатор для определения поля, как мутабельного. То есть даже в `const` методах данное поле можно будет менять.
 ---
+---
+# Static
+```cpp
+static int Foo() {
+    static int static_variable a = 1;
+    return a;
+}
+
+class Boo {
+public:
+    static int Func() {
+        static int static_variable = 1;
+        return static_variable;
+        // return field_;
+        // compilation error!
+    }
+
+private:
+    int field_{1};
+};
+
+int main() {
+    std::cout << Foo::static_variable << ' '
+        << Foo() << ' '
+        << Boo::Func() << ' '
+        << Boo::Func::static_variable << std::endl;
+}
+```
+---
 # Выделение динамической памяти
 ```cpp
 auto* ptr_int = new int{123};
