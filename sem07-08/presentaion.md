@@ -36,6 +36,7 @@ auto* ptr_array = new int[123];
 delete[] ptr_array;
 delete ptr_int;
 ```
+---
 # Smart pointers
 - [`std::unique_ptr`](https://en.cppreference.com/w/cpp/memory/unique_ptr)
 - [`std::shared_ptr`](https://en.cppreference.com/w/cpp/memory/shared_ptr)
