@@ -13,12 +13,19 @@ paginate: true
 # Классы
 ```cpp
 class Rectangle {
+    using SizeType = uint32_t;
+    using AttributesType = uint64_t;
+
 public:
-    Rectangle(uint32_t width, uint32_t height);
+    Rectangle(SizeType width, SizeType height);
 
-    uint64_t Area() const;
+    AttributesType Area() const;
 
-    uint64_t Perimeter() const;
+    AttributesType Perimeter() const;
+
+    void SetWidth(SizeType width);
+
+    void SetHeight(SizeType height);
 
 private:
     uint32_t width_;
