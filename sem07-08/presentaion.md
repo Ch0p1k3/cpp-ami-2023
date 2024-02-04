@@ -65,6 +65,59 @@ int main() {
 }
 ```
 ---
+# Explicit
+```cpp
+class User {
+public:
+    User(const std::string& nickname)
+        : nickname_(nickname) {
+    }
+
+    const std::string& Nickname() const {
+        return nickname_;
+    }
+
+private:
+    std::string nickname_;
+};
+
+void PrintNickname(User user) {
+    std::cout << user.Nickname() << std::endl;
+}
+
+int main() {
+    User user = "hello";
+    PrintNickname(user);
+    PrintNickname("world");
+}
+```
+# Explicit
+```cpp
+class User {
+public:
+    explicit User(const std::string& nickname)
+        : nickname_(nickname) {
+    }
+
+    const std::string& Nickname() const {
+        return nickname_;
+    }
+
+private:
+    std::string nickname_;
+};
+
+void PrintNickname(User user) {
+    std::cout << user.Nickname() << std::endl;
+}
+
+int main() {
+    User user("hello");
+    PrintNickname(user);
+    PrintNickname(User("hello"));
+}
+```
+---
 # Выделение динамической памяти
 ```cpp
 auto* ptr_int = new int{123};
