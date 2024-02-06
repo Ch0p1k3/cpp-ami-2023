@@ -20,6 +20,6 @@ function(add_catch TARGET)
   target_link_libraries(${TARGET} PRIVATE Catch2::Catch2WithMain)
 endfunction()
 
-add_subdirectory(array)
+add_subdirectory(deque)
 add_subdirectory(stack)
 add_subdirectory(string_view)
