@@ -91,6 +91,7 @@ int main() {
     PrintNickname("world");
 }
 ```
+---
 # Explicit
 ```cpp
 class User {
