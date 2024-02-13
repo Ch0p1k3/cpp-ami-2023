@@ -21,7 +21,7 @@ numbers.push_back(3); // numbers: [1, 3]
 numbers[0] = 4;  // numbers: [4, 3]
 
 std::cout << numbers.size() << std::endl; // 2, за O(1)
-std::cout << numbers.back() << std::endl; // 4, numbers[numbers.size() - 1]
+std::cout << numbers.back() << std::endl; // 3, numbers[numbers.size() - 1]
 std::cout << numbers.front() << std::endl; // 4, numbers[0]
 
 numbers.pop_back();
@@ -114,7 +114,7 @@ const auto map = std::unordered_map<int, int>{
     {1, 2},
     {3, 4}
 };
-for (const auto pair : std::unordered_map<int>{1, 2, 3, 4}) {
+for (const auto pair : map) {
     std::cout << pair.first << ' ' << pair.second << std::endl;
 }
 ```
@@ -125,7 +125,7 @@ const auto map = std::unordered_map<int, int>{
     {1, 2},
     {3, 4}
 };
-for (const auto [k, v] : std::unordered_map<int>{1, 2, 3, 4}) {
+for (const auto [k, v] : map) {
     std::cout << k << ' ' << v << std::endl;
 }
 ```
