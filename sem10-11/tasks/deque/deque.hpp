@@ -10,51 +10,31 @@ public:
     Deque(const Deque& other) = default;
     Deque(Deque&& other) = default;
 
-    explicit Deque(size_t size) : data_(size) {
-    }
+    explicit Deque(size_t size);
 
-    Deque(std::initializer_list<int> list) : data_{list} {
-    }
+    Deque(std::initializer_list<int> list);
 
     Deque& operator=(const Deque& other) = default;
     Deque& operator=(Deque&& other) = default;
 
-    void Swap(Deque& other) {
-        std::swap(data_, other.data_);
-    }
+    void Swap(Deque& other);
 
-    void PushBack(int value) {
-        data_.push_back(value);
-    }
+    void PushBack(int value);
 
-    void PopBack() {
-        data_.pop_back();
-    }
+    void PopBack();
 
-    void PushFront(int value) {
-        data_.push_front(value);
-    }
+    void PushFront(int value);
 
-    void PopFront() {
-        data_.pop_front();
-    }
+    void PopFront();
 
-    int& operator[](size_t index) {
-        return data_[index];
-    }
+    int& operator[](size_t index);
 
-    const int& operator[](size_t index) const {
-        return data_[index];
-    }
+    const int& operator[](size_t index) const;
 
-    size_t Size() const {
-        return data_.size();
-    }
+    size_t Size() const;
 
-    void Clear() {
-        data_.clear();
-    }
+    void Clear();
 
 private:
-    std::deque<int> data_;
+    /* some fields */
 };
