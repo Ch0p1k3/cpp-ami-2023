@@ -21,4 +21,5 @@ function(add_catch TARGET)
 endfunction()
 
 add_subdirectory(deque)
+add_subdirectory(smart_ptrs)
 add_subdirectory(stack)
