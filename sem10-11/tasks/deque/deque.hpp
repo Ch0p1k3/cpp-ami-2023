@@ -2,7 +2,6 @@
 
 #include <cstddef>
 #include <initializer_list>
-#include <deque>
 
 class Deque {
 public:
