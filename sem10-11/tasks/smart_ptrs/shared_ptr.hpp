@@ -2,8 +2,6 @@
 
 #include <string>
 
-// class WeakPtr;
-
 class SharedPtr {
 public:
     SharedPtr() = default;
@@ -84,10 +82,3 @@ private:
     size_t* cnt_{nullptr};
     std::string* ptr_{nullptr};
 };
-
-// class WeakPtr {
-// public:
-// };
-
-// SharedPtr::SharedPtr(const WeakPtr& rhs) {
-// }
