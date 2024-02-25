@@ -37,3 +37,6 @@ https://en.cppreference.com/w/cpp/language/definition
 ---
 ---
 # Циклы в include
+---
+---
+# Forward declaration
