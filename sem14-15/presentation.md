@@ -473,3 +473,88 @@ int main() {
     // ff
 }
 ```
+---
+# std::boolalpha, std::noboolalpha
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << std::boolalpha << true << ' '
+                << false << '\n';
+    std::cout << std::noboolalpha << true << ' '
+                << false << '\n';
+    // true false
+    // 1 0
+}
+```
+---
+# std::setprecision()
+```cpp
+#include <iomanip>
+#include <iostream>
+
+int main() {
+    using std::cout, std::setprecision;
+    float pi{3.141592};
+    cout << setprecision(1) << pi << '\n';
+    cout << setprecision(2) << pi << '\n';
+    cout << setprecision(3) << pi << '\n';
+    cout << setprecision(-1) << pi;
+    // 3
+    // 3.1
+    // 3.14
+    // 3.14159
+}
+```
+---
+# precision
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout.precision(3);
+    std::cout << 3.1415;
+    // 3.14
+}
+```
+---
+# std::setw()
+```cpp
+#include <iomanip>
+#include <iostream>
+
+int main() {
+    std::cout << std::setfill('-');
+    std::cout << "Using std::setw(6):\n";
+    std::cout << std::setw(6) << 1 << '\n';
+    std::cout << std::setw(6) << 12 << '\n';
+    std::cout << std::setw(6) << 123 << '\n';
+    std::cout << std::setw(6) << 1234 << '\n';
+    std::cout << std::setw(6) << 12345 << '\n';
+    // -----1
+    // ----12
+    // ---123
+    // --1234
+    // -12345
+}
+```
+# put(), write()
+```cpp
+#include <iomanip>
+#include <iostream>
+
+int main() {
+    std::cout.put('A');
+    std::cout.put('\n');
+
+    std::cout << std::setw(5);
+    std::cout << "B\n";
+
+    // This setw will be ignored
+    std::cout << std::setw(10);
+    std::cout.put('C');
+    // A
+    //     B
+    // C
+}
+```
