@@ -538,6 +538,7 @@ int main() {
     // -12345
 }
 ```
+---
 # put(), write()
 ```cpp
 #include <iomanip>
