@@ -355,10 +355,10 @@ int main() {
 #include <thread>
 
 int main() {
-  using namespace std::chrono_literals;
-  std::cout << "Hello world!";
-  std::this_thread::sleep_for(5s);
-  std::cout << "\nDone!";
+    using namespace std::chrono_literals;
+    std::cout << "Hello world!";
+    std::this_thread::sleep_for(5s);
+    std::cout << "\nDone!";
 }
 ```
 ---
@@ -368,11 +368,11 @@ int main() {
 #include <thread>
 
 int main() {
-  using namespace std::chrono_literals;
-  std::cout << "Hello world!";
-  std::cout.flush();
-  std::this_thread::sleep_for(5s);
-  std::cout << "\nDone!";
+    using namespace std::chrono_literals;
+    std::cout << "Hello world!";
+    std::cout.flush();
+    std::this_thread::sleep_for(5s);
+    std::cout << "\nDone!";
 }
 ```
 ---
@@ -382,10 +382,10 @@ int main() {
 #include <thread>
 
 int main() {
-  using namespace std::chrono_literals;
-  std::cout << "Hello world!" << std::flush;
-  std::this_thread::sleep_for(5s);
-  std::cout << "\nDone!";
+    using namespace std::chrono_literals;
+    std::cout << "Hello world!" << std::flush;
+    std::this_thread::sleep_for(5s);
+    std::cout << "\nDone!";
 }
 ```
 ---
@@ -395,9 +395,81 @@ int main() {
 #include <thread>
 
 int main() {
-  using namespace std::chrono_literals;
-  std::cout << "Hello world!" << std::endl;
-  std::this_thread::sleep_for(5s);
-  std::cout << "\nDone!";
+    using namespace std::chrono_literals;
+    std::cout << "Hello world!" << std::endl;
+    std::this_thread::sleep_for(5s);
+    std::cout << "\nDone!";
+}
+```
+---
+# Manipulators
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << std::hex;
+    std::cout << "Hex: " << 255;
+    std::cout << "\nStill Hex: " << 123;
+
+    std::cout << std::dec;
+    std::cout << "\n\nNow Decimal: " << 255;
+    std::cout << "\nStill Decimal: " << 123;
+
+    // Hex: ff
+    // Still Hex: 7b
+    // Now Decimal: 255
+    // Still Decimal: 123
+}
+```
+---
+# std::oct, std::dec, std::hex
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << std::oct << 255 << '\n';
+    std::cout << std::dec << 255 << '\n';
+    std::cout << std::hex << 255 << '\n';
+    // 377
+    // 255
+    // ff
+}
+```
+---
+# std::oct, std::dec, std::hex
+```cpp
+#include <iostream>
+
+int main() {
+    std::oct(std::cout);
+    std::cout << 255 << '\n';
+
+    std::dec(std::cout);
+    std::cout << 255 << '\n';
+
+    std::hex(std::cout);
+    std::cout << 255 << '\n';
+
+    // 377
+    // 255
+    // ff
+}
+```
+---
+# iomanip
+- https://en.cppreference.com/w/cpp/header/iomanip
+---
+# std::setbase()
+```cpp
+#include <iomanip>
+#include <iostream>
+
+int main() {
+    std::cout << std::setbase(8)  << 255 << '\n';
+    std::cout << std::setbase(10) << 255 << '\n';
+    std::cout << std::setbase(16) << 255 << '\n';
+    // 377
+    // 255
+    // ff
 }
 ```
