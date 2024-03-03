@@ -343,5 +343,61 @@ int main() {
     std::back_inserter(intersection));
     // intersection == {2, 4}
 }
+```
+---
+# Streams. Manipulators
+- https://www.studyplan.dev/pro-cpp/output-streams
+- https://caiorss.github.io/C-Cpp-Notes/STL_Input_and_output.html
+---
+# Buffered vs Unbuffered Streams
+```cpp
+#include <iostream>
+#include <thread>
 
+int main() {
+  using namespace std::chrono_literals;
+  std::cout << "Hello world!";
+  std::this_thread::sleep_for(5s);
+  std::cout << "\nDone!";
+}
+```
+---
+# Flush
+```cpp
+#include <iostream>
+#include <thread>
+
+int main() {
+  using namespace std::chrono_literals;
+  std::cout << "Hello world!";
+  std::cout.flush();
+  std::this_thread::sleep_for(5s);
+  std::cout << "\nDone!";
+}
+```
+---
+# Flush
+```cpp
+#include <iostream>
+#include <thread>
+
+int main() {
+  using namespace std::chrono_literals;
+  std::cout << "Hello world!" << std::flush;
+  std::this_thread::sleep_for(5s);
+  std::cout << "\nDone!";
+}
+```
+---
+# std::endl
+```cpp
+#include <iostream>
+#include <thread>
+
+int main() {
+  using namespace std::chrono_literals;
+  std::cout << "Hello world!" << std::endl;
+  std::this_thread::sleep_for(5s);
+  std::cout << "\nDone!";
+}
 ```
