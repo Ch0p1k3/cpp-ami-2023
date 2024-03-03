@@ -213,6 +213,36 @@ int main() {
 }
 ```
 ---
+# std::fill, std::generate, std::fill_n, std::generate_n
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> data(5, 0);
+    for (auto v : data)
+        std::cout << v << " ";
+    std::cout << "\n";
+
+    std::fill(data.begin(), data.end(), 11);
+    for (auto v : data)
+        std::cout << v << " ";
+    std::cout << "\n";
+
+    std::generate(data, []() { return 5; });
+    for (auto v : data)
+        std::cout << v << " ";
+    std::cout << "\n";
+
+    // iota-like
+    std::generate(data, [i = 0]() mutable { return i++; });
+    for (auto v : data)
+        std::cout << v << " ";
+    std::cout << "\n";
+}
+```
+---
 # std::unique
 ```cpp
 #include <vector>
