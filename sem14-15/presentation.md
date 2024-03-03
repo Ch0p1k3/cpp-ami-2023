@@ -286,3 +286,29 @@ int main() {
     std::cout << std::boolalpha << "none_odd == " << none_odd << "\n";
 }
 ```
+---
+# std::min, std::max
+```cpp
+#include <algorithm>
+#include <iomanip>
+#include <iostream>
+
+int main() {
+    int x = 10, y = 20;
+    int min = std::min(x, y);
+    std::cout << "min == " << min << "\n";
+
+    std::string hello = "hello", world = "world";
+    std::string& universe = const_cast<std::string&>(std::max(hello, world));
+    universe = "universe";
+
+    std::string greeting = hello + " " + world;
+    std::cout << "greeting == " << std::quoted(greeting) << "\n";
+
+    int j = 20;
+    auto& k = std::max(5, j);
+    // IMPORTANT! only works because 5 < j
+    // would produce dangling reference otherwise
+    std::cout << "k == " << k << "\n";
+}
+```
