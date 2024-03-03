@@ -312,3 +312,36 @@ int main() {
     std::cout << "k == " << k << "\n";
 }
 ```
+---
+# std::set_difference, std::set_union, std::set_intersection
+```cpp
+#include <vector>
+#include <algorithm>
+#include <iostream>
+
+int main() {
+    std::vector<int> data1{1, 2, 3, 4, 5, 6};
+    std::vector<int> data2{3, 4, 5};
+
+    std::vector<int> difference;
+    std::set_difference(data1, data2,
+        std::back_inserter(difference));
+
+    for (auto v : difference) {
+        std::cout << v << " ";
+    }
+    std::cout << "\n";
+
+    std::vector<int> set_union;
+    std::ranges::set_union(data1, data2,
+    std::back_inserter(set_union));
+    // set_union == { 1, 2, 3, 4, 5, 6 }
+
+    data2 = std::vector<int>{2, 4, 6}
+    std::vector<int> intersection;
+    std::ranges::set_intersection(data1, data2,
+    std::back_inserter(intersection));
+    // intersection == {2, 4}
+}
+
+```
