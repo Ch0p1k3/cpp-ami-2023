@@ -262,3 +262,27 @@ int main() {
 }
 
 ```
+---
+# std::all_of, std::any_of, std::none_of
+```cpp
+#include <algorithm>
+#include <cmath>
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> data{-2, 0, 2, 4, 6, 8};
+
+    bool all_even = std::all_of(data,
+        [](int v) { return v % 2 == 0; });
+    std::cout << std::boolalpha << "all_even == " << all_even << "\n";
+
+    bool one_negative = std::any_of(data,
+        [](int v) { return std::signbit(v); });
+    std::cout << std::boolalpha << "one_negative == " << one_negative << "\n";
+
+    bool none_odd = std::none_of(data,
+        [](int v) { return v % 2 != 0; });
+    std::cout << std::boolalpha << "none_odd == " << none_odd << "\n";
+}
+```
