@@ -559,3 +559,23 @@ int main() {
     // C
 }
 ```
+---
+# put(), write()
+```cpp
+#include <iomanip>
+#include <iostream>
+
+int main() {
+    std::cout.write("Hello\n", 6);
+
+    std::cout << std::setw(10);
+    std::cout << "Hello\n";
+
+    // setw will be ignored
+    std::cout << std::setw(10);
+    std::cout.write("Hello\n", 3);
+    // Hello
+    //     Hello
+    // Hel
+}
+```
