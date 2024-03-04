@@ -579,3 +579,24 @@ int main() {
     // Hel
 }
 ```
+---
+# Standard Library IO Class Hierarchy
+- https://caiorss.github.io/C-Cpp-Notes/STL_Input_and_output.html#org6360130
+---
+# fstream
+```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
+
+int main () {
+    std::ifstream myfile;
+    myfile.open("shopping_list.txt");
+    // std::ifstream myfile("shopping_list.txt");
+    std::string mystring;
+    if (myfile.is_open()) {
+        myfile >> mystring;
+        std::cout << mystring;
+    }
+}
+```
