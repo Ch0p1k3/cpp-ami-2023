@@ -600,3 +600,28 @@ int main () {
     }
 }
 ```
+---
+# openning modes
+- `ios::app` Append mode. All output to that file is to be appended to the end.
+- `ios::ate` Open a file for output and move the read/write control to the end of the file.
+- `ios::in` Open a file for reading.
+- `ios::out` Open a file for writing.
+- `ios::trunc` If the file already exists, its contents will be truncated before opening the file.
+
+https://itsourcecode.com/cplus-tutorial/learn-c-files-and-streams-with-best-program-examples/
+---
+---
+# seekg
+```cpp
+// position to the nth byte of fileObject (assumes ios::beg)
+fileObject.seekg( n );
+
+// position n bytes forward in fileObject
+fileObject.seekg( n, ios::cur );
+
+// position n bytes back from end of fileObject
+fileObject.seekg( n, ios::end );
+
+// position at end of fileObject
+fileObject.seekg( 0, ios::end );
+```
